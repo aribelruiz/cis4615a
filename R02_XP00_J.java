@@ -1,10 +1,12 @@
 // Rule 02. Expressions (XP)
 // XP00-J. Do not ignore values returned by methods.
 
-// Non-compliant code:
+// Compliant code:
 public void deleteFile(){
  
     File someFile = new File("someFileName.txt");
     // Do something with someFile
-    someFile.delete();
+    if (!someFile.delete()) {
+      // Handle failure to delete the file
+    }  
   }
