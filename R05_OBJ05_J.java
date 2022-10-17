@@ -1,7 +1,7 @@
 // Rule 05. Object Orientation (OBJ)
 // OBJ05-J. Do not return references to private mutable class members.
 
-// Non-compliant code:
+// Compliant code:
 class MutableClass {
     private Date d;
    
